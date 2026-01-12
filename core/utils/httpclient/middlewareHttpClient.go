@@ -5,7 +5,7 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"io/ioutil"
+	"io"
 	"net/http"
 	"sync"
 
@@ -140,7 +140,7 @@ func (c *httpClient) httpDo(req *http.Request, headers map[string]string) (respC
 
 		}
 	}()
-	body, err := ioutil.ReadAll(resp.Body)
+	body, err := io.ReadAll(resp.Body)
 	respCode = resp.StatusCode
 	if (respCode < http.StatusOK) || (respCode >= http.StatusMultipleChoices) {
 		httpErr := HTTPError{}
