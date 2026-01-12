@@ -1,0 +1,57 @@
+package main
+
+import (
+	"fmt"
+	"os"
+	"path"
+	"runtime"
+
+	"github.com/kweaver-ai/idrm-go-frame/core/config"
+	"github.com/kweaver-ai/idrm-go-frame/core/config/sources"
+	"github.com/kweaver-ai/idrm-go-frame/core/config/sources/env"
+	"github.com/kweaver-ai/idrm-go-frame/core/config/sources/file"
+)
+
+var pwd string = "."
+
+func init() {
+	var abPath string
+	_, filename, _, ok := runtime.Caller(0)
+	if ok {
+		abPath = path.Dir(filename)
+		pwd = abPath
+	}
+}
+
+type CoreConfig struct {
+	Destination string `json:"destination"` //log output destination
+	LogLevel    string `json:"log_level"`   //lowest log level in this core
+}
+
+type Options struct {
+	Name        string       `json:"name"`
+	CoreConfigs []CoreConfig `json:"cores"`
+}
+
+type LogConfigs struct {
+	Logs []Options `json:"logs"`
+}
+
+func InitSources(paths ...string) {
+	sources := make([]sources.Source, len(paths)+1)
+	sources[0] = env.NewSource()
+	for i, path := range paths {
+		sources[i+1] = file.NewSource(path)
+	}
+	config.Init(sources...)
+}
+
+func main() {
+	os.Setenv(config.ProjectEnvKey, "dev")
+	configPath := pwd + "/" + file.AppendEnv("config.yaml")
+	//configPath := pwd + "/" + "conf"
+	InitSources(configPath)
+	logs := config.Scan[LogConfigs]()
+	fmt.Printf("logs config %v", logs)
+
+}

@@ -1,0 +1,26 @@
+logs:
+  - name: ago                                   #日志名称
+    default: true                               #默认日志实例
+    enable_caller: true                         #是否输出日志调用方
+    stacktrace_level:                           #输出堆栈的最低日志等级
+    stack_filter:                               #堆栈过滤字段
+      - runtime
+    development: true                           #是否开启development模式
+    cores:                                      #日志输出的流
+      - destination: infos.log                  #输出的文件名
+        rotate_size: 10MB                       #文件分割的大小
+        core_type: file                         #日志流的类型, file, stdout, 其他类型用户可以自己注册
+        enable_color: false                     #是否开启输出颜色
+        output_format: json                     #日志输出的格式, json, console
+        filename_format: "-%Y-%m-%d.log"        #文件分割的名称，日期格式，下面的是默认格式
+        log_level: info                         #该日志流的格式
+      - destination: stdout                     #输入流到标准输出
+        core_type: stdout                       #日志流的输出类型  stdout
+        enable_color: true
+        output_format: console
+        log_level: debug
+      #下面是自定义的core_type配置
+      - core_type: test
+        enable_color: false
+        output_format: json
+        log_level: info
