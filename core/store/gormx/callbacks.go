@@ -1,8 +1,9 @@
 package gormx
 
 import (
-	"gorm.io/gorm"
 	"strings"
+
+	"gorm.io/gorm"
 )
 
 var callbackMap map[string]func(*gorm.DB)

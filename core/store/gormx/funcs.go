@@ -2,8 +2,9 @@ package gormx
 
 import (
 	"fmt"
-	"gorm.io/gorm"
 	"strings"
+
+	"gorm.io/gorm"
 )
 
 func GetDriverName(db *gorm.DB) string {
