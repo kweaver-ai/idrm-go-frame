@@ -1,7 +1,6 @@
 module github.com/kweaver-ai/idrm-go-frame
 
-go 1.22
-
+go 1.24.0
 
 require (
 	gitee.com/tdxmkf123/gorm-driver-dameng v1.0.4
