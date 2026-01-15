@@ -32,7 +32,7 @@ require (
 	github.com/segmentio/kafka-go v0.4.49
 	github.com/sony/sonyflake v1.3.0
 	github.com/stretchr/testify v1.11.1
-	github.com/zeromicro/go-zero v1.9.4
+	github.com/zeromicro/go-zero v1.4.0
 	go.opentelemetry.io/contrib/instrumentation/github.com/Shopify/sarama/otelsarama v0.43.0
 	go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp v0.64.0
 	go.opentelemetry.io/otel v1.39.0
