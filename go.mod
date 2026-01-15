@@ -11,7 +11,7 @@ require (
 	github.com/avast/retry-go v3.0.0+incompatible
 	github.com/fsnotify/fsnotify v1.9.0
 	github.com/gin-gonic/gin v1.11.0
-	github.com/go-kratos/kratos/v2 v2.9.2
+	github.com/go-kratos/kratos/v2 v2.5.0
 	github.com/go-playground/locales v0.14.1
 	github.com/go-playground/universal-translator v0.18.1
 	github.com/go-playground/validator/v10 v10.30.1
@@ -51,7 +51,6 @@ require (
 )
 
 require (
-	dario.cat/mergo v1.0.2 // indirect
 	filippo.io/edwards25519 v1.1.0 // indirect
 	github.com/HuaweiCloudDeveloper/gaussdb-go v1.0.0-rc1 // indirect
 	github.com/bytedance/gopkg v0.1.3 // indirect
