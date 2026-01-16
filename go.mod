@@ -10,7 +10,7 @@ require (
 	github.com/acmestack/gorm-plus v0.1.5
 	github.com/avast/retry-go v3.0.0+incompatible
 	github.com/fsnotify/fsnotify v1.9.0
-	github.com/gin-gonic/gin v1.11.0
+	github.com/gin-gonic/gin v1.9.1
 	github.com/go-kratos/kratos/v2 v2.5.0
 	github.com/go-playground/locales v0.14.1
 	github.com/go-playground/universal-translator v0.18.1
@@ -21,7 +21,7 @@ require (
 	github.com/google/uuid v1.6.0
 	github.com/imdario/mergo v0.3.16
 	github.com/json-iterator/go v1.1.12
-	github.com/kweaver-ai/TelemetrySDK-Go/exporter/v2 v2.10.3
+	github.com/kweaver-ai/TelemetrySDK-Go/exporter/v2 v2.10.2
 	github.com/kweaver-ai/TelemetrySDK-Go/span/v2 v2.10.3
 	github.com/lestrrat-go/file-rotatelogs v2.4.0+incompatible
 	github.com/nsqio/go-nsq v1.1.0
@@ -41,7 +41,7 @@ require (
 	go.uber.org/automaxprocs v1.6.0
 	go.uber.org/zap v1.27.1
 	golang.org/x/sync v0.19.0
-	google.golang.org/protobuf v1.36.11
+	google.golang.org/protobuf v1.33.0
 	gopkg.in/yaml.v3 v3.0.1
 	gorm.io/driver/gaussdb v0.1.0
 	gorm.io/driver/mysql v1.6.0
@@ -78,7 +78,6 @@ require (
 	github.com/go-openapi/swag v0.22.4 // indirect
 	github.com/go-viper/mapstructure/v2 v2.4.0 // indirect
 	github.com/goccy/go-json v0.10.2 // indirect
-	github.com/goccy/go-yaml v1.18.0 // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
 	github.com/golang-sql/civil v0.0.0-20220223132316-b832511892a9 // indirect
 	github.com/golang-sql/sqlexp v0.1.0 // indirect
@@ -121,8 +120,6 @@ require (
 	github.com/pierrec/lz4/v4 v4.1.23 // indirect
 	github.com/pmezard/go-difflib v1.0.1-0.20181226105442-5d4384ee4fb2 // indirect
 	github.com/power-devops/perfstat v0.0.0-20221212215047-62379fc7944b // indirect
-	github.com/quic-go/qpack v0.6.0 // indirect
-	github.com/quic-go/quic-go v0.58.0 // indirect
 	github.com/rcrowley/go-metrics v0.0.0-20250401214520-65e299d6c5c9 // indirect
 	github.com/sagikazarmark/locafero v0.11.0 // indirect
 	github.com/shirou/gopsutil/v3 v3.24.5 // indirect
@@ -147,7 +144,7 @@ require (
 	go.opentelemetry.io/auto/sdk v1.2.1 // indirect
 	go.opentelemetry.io/otel/metric v1.39.0 // indirect
 	go.opentelemetry.io/otel/sdk/metric v1.39.0 // indirect
-	go.uber.org/multierr v1.10.0 // indirect
+	go.uber.org/multierr v1.11.0 // indirect
 	go.yaml.in/yaml/v3 v3.0.4 // indirect
 	golang.org/x/arch v0.23.0 // indirect
 	golang.org/x/crypto v0.46.0 // indirect
